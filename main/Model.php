@@ -2,10 +2,13 @@
 include 'Database.php';
 class Model extends Database
 {
+    protected static $table;
+
     public static function getAll()
     {
         $sql = "SELECT * FROM " . static::$table;
         $query = self::connect()->prepare($sql);
+        $query->execute();
         return $query->fetchAll(PDO::FETCH_OBJ);
     }
 

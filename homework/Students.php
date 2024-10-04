@@ -1,8 +1,8 @@
 <?php
-include "Modal.php";
-class Students extends Modal
+include "Model.php";
+class Students extends Models
 {
-    public static $table = "students";
+    protected static $table = 'students';
 }
 
 ?>
